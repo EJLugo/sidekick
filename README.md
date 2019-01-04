@@ -29,7 +29,7 @@
 * To be created
 
 ## Wireframes
-* ![Wireframes for MVP]()
+![Wireframes for MVP](https://github.com/EJLugo/sidekick/blob/master/README%20Images/Sidekick%20Wireframes.JPG)
 
 ## ERD
 ![ERD for MVP](https://github.com/EJLugo/sidekick/blob/master/README%20Images/Sidekick%20ERD.png)
