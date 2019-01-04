@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  studio_location: MyString
+  studio_name: MyString
+  studio_contact_info: MyString
+
+two:
+  studio_location: MyString
+  studio_name: MyString
+  studio_contact_info: MyString
