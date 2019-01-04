@@ -8,7 +8,7 @@
 * React
 
 ## Trello Board
-[Trello][https://trello.com/b/uaVqcOmJ/sidekick]
+[Trello](https://trello.com/b/uaVqcOmJ/sidekick)
 
 ## MVP
 * Users can search for workouts by type
@@ -32,4 +32,4 @@
 * To be added
 
 ## ERD
-* To be added
+![ERD for MVP]()
