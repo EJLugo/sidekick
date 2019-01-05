@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_04_193222) do
+ActiveRecord::Schema.define(version: 2019_01_05_033429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,9 @@ ActiveRecord::Schema.define(version: 2019_01_04_193222) do
     t.string "workout_level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "studio_id"
+    t.index ["studio_id"], name: "index_workouts_on_studio_id"
   end
 
+  add_foreign_key "workouts", "studios"
 end

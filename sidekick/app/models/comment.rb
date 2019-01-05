@@ -1,3 +1,3 @@
 class Comment < ApplicationRecord
-	belongs_to :blog
+	belongs_to :blogs, foreign_key: 'blog_id'
 end
