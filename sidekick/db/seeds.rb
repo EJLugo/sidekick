@@ -44,4 +44,13 @@ studios = Studio.create([
 
 Workout.destroy_all
 
-workouts = Workout.create(workout_type: 'Yoga', workout_level: 'Beginner')
+Workout.create([
+	{
+		workout_type: 'Yoga',
+		workout_level: 'Beginner'
+	},
+	{
+		workout_type: 'Row',
+		workout_level: 'Beginner'
+	}
+]);

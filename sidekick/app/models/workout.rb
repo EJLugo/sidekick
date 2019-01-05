@@ -1,3 +1,3 @@
 class Workout < ApplicationRecord
-	belongs_to :studios, foreign_key: 'studio_id'
+	belongs_to :studio, foreign_key: 'studio_id'
 end
