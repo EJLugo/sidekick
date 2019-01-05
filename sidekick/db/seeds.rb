@@ -54,3 +54,16 @@ Workout.create([
 		workout_level: 'Beginner'
 	}
 ]);
+
+Comment.destroy_all
+
+Comment.create([
+	{
+		user_name: 'Evelyn',
+		comment_body: 'Whyyyyyyy'
+	},
+	{
+		user_name: 'Bob',
+		comment_body: 'I have no idea'
+	}
+])
