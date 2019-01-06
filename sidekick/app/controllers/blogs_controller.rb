@@ -5,7 +5,9 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
 
-    render json: @blogs, include: :comments
+    render json: @blogs
+		# , include: :comments
+		# with include :comments, cannot pull the data from the server (as of now, no comments added)
   end
 
   # GET /blogs/1
