@@ -5,12 +5,12 @@ class StudiosController < ApplicationController
   def index
     @studios = Studio.all
 
-    render json: @studios
+    render json: @studios, include: :workouts
   end
 
   # GET /studios/1
   def show
-    render json: @studio
+    render json: @studio, include: :workouts
   end
 
   # POST /studios

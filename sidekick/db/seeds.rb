@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+Comment.destroy_all
 Blog.destroy_all
+
+@blog1 = Blog.new(title: 'One', blog_body: 'Much wow.')
+@blog1.comments.new(user_name: 'Me', comment_body: 'Hi')
 
 blogs = Blog.create([
 	{
@@ -20,7 +23,7 @@ blogs = Blog.create([
 	}
 ]);
 
-
+Workout.destroy_all
 Studio.destroy_all
 
 studios = Studio.create([
@@ -41,10 +44,7 @@ studios = Studio.create([
 	}
 ]);
 
-
-Workout.destroy_all
-
-Workout.create([
+workouts = Workout.create([
 	{
 		workout_type: 'Yoga',
 		workout_level: 'Beginner'
@@ -55,7 +55,7 @@ Workout.create([
 	}
 ]);
 
-Comment.destroy_all
+
 
 Comment.create([
 	{

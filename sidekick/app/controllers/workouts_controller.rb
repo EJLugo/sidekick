@@ -15,9 +15,10 @@ class WorkoutsController < ApplicationController
 
   # POST /workouts
   def create
+		@studio = Studio.find(params[:studio_id]);
     @workout = Workout.new(workout_params)
 
-    if @workout.save
+    if @studio.workouts << @workout
       render json: @workout, status: :created, location: @workout
     else
       render json: @workout.errors, status: :unprocessable_entity
