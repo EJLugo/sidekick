@@ -2,23 +2,15 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-function NavBar(props) {
+export default function NavBar() {
 	return (
 		<ul>
 			<li>
-				<Link to '/'>Home</Link>
+				<Link to='/'>Home</Link>
 			</li>
 			<li>
-				<Link to '/studios'>Studios</Link>
-			</li>
-			<li>
-				<Link to '/workouts'>Workouts</Link>
-			</li>
-			<li>
-				<Link to '/blogs'>The Cool Down</Link>
+				<Link to='/studios'>Studios</Link>
 			</li>
 		</ul>
 	);
 }
-
-export default NavBar;
