@@ -5,8 +5,7 @@ async function getStudios(){
 	const resp = await axios({
 		url: '/studios'
 	});
+	console.log(resp);
+	return resp.data;
 }
-console.log(resp);
-return resp.data;
-
 export { getStudios }

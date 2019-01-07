@@ -5,8 +5,7 @@ async function getWorkouts() {
 	const resp = await axios({
 		url: '/workouts'
 	});
+	console.log(resp)
+	return resp.data;
 }
-console.log(resp)
-return resp.data;
-
 export { getWorkouts }
