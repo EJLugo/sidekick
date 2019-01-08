@@ -21,10 +21,20 @@ class Blogs extends Component {
 		return (
 			<div>
 			{this.state.blogs.map(blog => (
-				<ul>
-					<li key={blog.id}>{blog.title}</li>
-					<li>{blog.blog_body}</li>
-				</ul>
+				<div key={blog.id}>
+					<ul>
+						<li>{blog.title}</li>
+						<li>{blog.blog_body}</li>
+					</ul>
+					<hr />
+					{blog.comments.map(comment => (
+						<ul>
+							<li>{comment.user_name}</li>
+							<li>{comment.comment_body}</li>
+						</ul>
+					))}
+					<hr />
+				</div>
 			))}
 			</div>
 		)
