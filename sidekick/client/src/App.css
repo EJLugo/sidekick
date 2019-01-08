@@ -5,3 +5,7 @@
 ul {
 	list-style: none;
 }
+
+.home-page {
+	background-image: URL('crossfit-chicks.jpg');
+}

@@ -14,6 +14,9 @@ export default function NavBar() {
 			<li>
 				<Link to='/workouts'>Workouts</Link>
 			</li>
+			<li>
+				<Link to='/blogs'>Blog</Link>
+			</li>
 		</ul>
 	);
 }

@@ -15,9 +15,10 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
+		@blog = Blog.find(params[:blog_id])
     @comment = Comment.new(comment_params)
 
-    if @comment.save
+    if @blog.comments << @comment
       render json: @comment, status: :created, location: @comment
     else
       render json: @comment.errors, status: :unprocessable_entity

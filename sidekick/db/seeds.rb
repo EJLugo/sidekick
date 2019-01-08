@@ -9,9 +9,6 @@
 Comment.destroy_all
 Blog.destroy_all
 
-@blog1 = Blog.new(title: 'One', blog_body: 'Much wow.')
-@blog1.comments.new(user_name: 'Me', comment_body: 'Hi')
-
 blogs = Blog.create([
 	{
 		title: 'This is an awesome article',
