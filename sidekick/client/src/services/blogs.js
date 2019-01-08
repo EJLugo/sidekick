@@ -9,4 +9,13 @@ async function getBlogs(){
 	return resp.data;
 }
 
-export { getBlogs }
+async function postComment(id){
+	console.log('You said something cool!');
+	const resp = await axios({
+		url: `/blogs/${id}/comments`
+	});
+	console.log(resp);
+	return resp.data;
+}
+
+export { getBlogs, postComment }

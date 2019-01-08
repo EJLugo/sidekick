@@ -1,12 +1,34 @@
 import React, { Component } from 'react';
+import CommentList from './CommentList';
+import CommentForm from './CommentForm';
 
-import { getBlogs } from '../services/blogs';
+import { getBlogs, postComment } from '../services/blogs';
 
 class Blogs extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			blogs: []
+			blogs: [],
+			username: '',
+			comment: ''
+		}
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleChange(e) {
+		const { name, value } = e.target;
+		this.setState({
+			[name]: value
+		});
+	}
+
+	async handleSubmit(e) {
+		e.preventDefault();
+		try {
+			await postComment();
+		} catch(e) {
+			console.log(e);
 		}
 	}
 
@@ -27,14 +49,10 @@ class Blogs extends Component {
 						<li>{blog.blog_body}</li>
 					</ul>
 					<hr />
-					{blog.comments.map(comment => (
-						<ul>
-							<li>{comment.user_name}</li>
-							<li>{comment.comment_body}</li>
-						</ul>
-					))}
-					<hr />
+					<CommentList blogs={blog} />
+					<CommentForm onChange={this.handleChange} onSubmit={this.handleSubmit} />
 				</div>
+
 			))}
 			</div>
 		)

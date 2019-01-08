@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 
-function CommentForm = props => {
+function CommentForm(props) {
 	return (
 		<form onSubmit={props.handleSubmit}>
 			<input
-				name='name'
+				name='username'
 				type='text'
-				value={props.user_name}
+				value={props.username}
 				onChange={props.handleChange}
 				placeholder='User Name'
 			>
+			</input>
 			<input
 				name='comment'
 				type='text'
-				value={props.comment_body}
+				value={props.comment}
 				onChange={props.handleChange}
 				placeholder='Enter Comment'
 			>
+			</input>
+			<button>Add Your Voice</button>
 		</form>
 	)
 }
