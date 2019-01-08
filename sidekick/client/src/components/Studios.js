@@ -23,8 +23,8 @@ class Studios extends Component {
 			<div>
 				{this.state.studios.map(studio => (
 					<div key={studio.id}>
+						<h2>{studio.studio_name}</h2>
 						<ul>
-							<li>{studio.studio_name}</li>
 							<li>{studio.studio_location}</li>
 							<li>{studio.studio_contact_info}</li>
 						</ul>
