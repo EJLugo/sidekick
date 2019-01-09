@@ -7,7 +7,9 @@ function CommentList(props) {
 		<ul key={comment.id}>
 			<li>{comment.user_name}</li>
 			<li>{comment.comment_body}</li>
+			<button onClick={() => props.handleDelete(comment.id)}>Delete</button>
 		</ul>
+
 	))}
 	<hr />
 	</div>

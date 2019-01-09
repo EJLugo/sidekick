@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 
-import { getBlogs, postComment } from '../services/blogs';
+import { getBlogs, postComment, deleteComment } from '../services/blogs';
 
 class Blogs extends Component {
 	constructor(props) {
@@ -14,6 +14,7 @@ class Blogs extends Component {
 		}
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleDelete = this.handleDelete.bind(this);
 	}
 
 	handleChange(e) {
@@ -36,6 +37,14 @@ class Blogs extends Component {
 		}
 	}
 
+	async handleDelete(id) {
+		const noMore = await deleteComment(id);
+		const blogs = await getBlogs();
+		this.setState({
+			blogs
+		})
+	}
+
 	async componentDidMount() {
 		const blogs = await getBlogs();
 		this.setState({
@@ -55,6 +64,7 @@ class Blogs extends Component {
 					<hr />
 					<CommentList
 						blogs={blog}
+						handleDelete={this.handleDelete}
 					/>
 					<CommentForm
 						handleChange={this.handleChange}

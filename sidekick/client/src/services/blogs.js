@@ -14,4 +14,10 @@ async function postComment(id, comment){
 	return resp.data;
 }
 
-export { getBlogs, postComment }
+async function deleteComment(id){
+	console.log('Bye!');
+	const resp = await axios.delete(`/blogs/${id}/comments/${id}`);
+	console.log(resp);
+}
+
+export { getBlogs, postComment, deleteComment }
