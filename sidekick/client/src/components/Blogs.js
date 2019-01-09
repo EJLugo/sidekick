@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 
-import { getBlogs, postComment, deleteComment } from '../services/blogs';
+import { getBlogs, postComment, deleteComment, updateComment } from '../services/blogs';
 
 class Blogs extends Component {
 	constructor(props) {
@@ -15,6 +15,7 @@ class Blogs extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDelete = this.handleDelete.bind(this);
+		this.handleUpdate = this.handleUpdate.bind(this);
 	}
 
 	handleChange(e) {
@@ -25,20 +26,23 @@ class Blogs extends Component {
 	}
 
 	async handleSubmit(id) {
-		console.log(id)
-		try {
-			await postComment(id, { comment: {user_name: this.state.username, comment_body: this.state.comment } });
-			const blogs = await getBlogs();
-			this.setState({
-				blogs
-			})
-		} catch(e) {
-			console.log(e);
-		}
+		await postComment(id, { comment: {user_name: this.state.username, comment_body: this.state.comment } });
+		const blogs = await getBlogs();
+		this.setState({
+			blogs
+		})
 	}
 
 	async handleDelete(id) {
 		const noMore = await deleteComment(id);
+		const blogs = await getBlogs();
+		this.setState({
+			blogs
+		})
+	}
+
+	async handleUpdate(id) {
+		await updateComment(id, { comment: {user_name: this.state.username, comment_body: this.state.comment } });
 		const blogs = await getBlogs();
 		this.setState({
 			blogs
@@ -51,6 +55,8 @@ class Blogs extends Component {
 			blogs
 		})
 	}
+
+
 
 	render() {
 		return (
@@ -65,6 +71,7 @@ class Blogs extends Component {
 					<CommentList
 						blogs={blog}
 						handleDelete={this.handleDelete}
+						handleUpdate={this.handleUpdate}
 					/>
 					<CommentForm
 						handleChange={this.handleChange}
