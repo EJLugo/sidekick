@@ -23,10 +23,14 @@ class Blogs extends Component {
 		});
 	}
 
-	async handleSubmit(e) {
-		e.preventDefault();
+	async handleSubmit(id) {
+		console.log(id)
 		try {
-			await postComment();
+			await postComment(id, { comment: {user_name: this.state.username, comment_body: this.state.comment } });
+			const blogs = await getBlogs();
+			this.setState({
+				blogs
+			})
 		} catch(e) {
 			console.log(e);
 		}
@@ -49,8 +53,14 @@ class Blogs extends Component {
 						<li>{blog.blog_body}</li>
 					</ul>
 					<hr />
-					<CommentList blogs={blog} />
-					<CommentForm onChange={this.handleChange} onSubmit={this.handleSubmit} />
+					<CommentList
+						blogs={blog}
+					/>
+					<CommentForm
+						handleChange={this.handleChange}
+						handleSubmit={this.handleSubmit}
+						blog={blog}
+					/>
 				</div>
 
 			))}

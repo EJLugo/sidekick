@@ -1,0 +1,10 @@
+body {
+	background-image: URL('../images/crossfit-chicks.jpg');
+	background-size: cover;
+}
+
+.sidekick-find {
+	color: #ffffff;
+	position: relative;
+	top: 222px;
+}

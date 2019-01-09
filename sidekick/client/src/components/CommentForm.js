@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 function CommentForm(props) {
 	return (
-		<form onSubmit={props.handleSubmit}>
+		<form onSubmit={(e) => {
+			e.preventDefault();
+			props.handleSubmit(props.blog.id);
+		}}>
 			<input
 				name='username'
 				type='text'

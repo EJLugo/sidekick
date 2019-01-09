@@ -4,7 +4,7 @@ function CommentList(props) {
 	return (
 	<div>
 	{props.blogs.comments.map(comment => (
-		<ul>
+		<ul key={comment.id}>
 			<li>{comment.user_name}</li>
 			<li>{comment.comment_body}</li>
 		</ul>
