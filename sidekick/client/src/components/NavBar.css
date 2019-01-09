@@ -1,0 +1,19 @@
+.nav-bar {
+	background-color: #6A5759;
+	position: relative;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-around;
+	padding: 10px 20px;
+
+}
+
+.nav-bar-link {
+	color: #D5DCDF;
+	font-size: 20px;
+	font-family: 'Staatliches', 'cursive';
+}
+
+.nav-bar-link:hover {
+	color: #BD998C;
+}
