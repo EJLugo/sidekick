@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Studios.css'
 import { getStudios } from '../services/studios';
 
 class Studios extends Component {
@@ -20,13 +21,14 @@ class Studios extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='studio-list-container'>
+				<div className='studio-list-nouse'>
 				{this.state.studios.map(studio => (
-					<div key={studio.id}>
-						<h2>{studio.studio_name}</h2>
-						<ul>
-							<li>{studio.studio_location}</li>
-							<li>{studio.studio_contact_info}</li>
+					<div key={studio.id} className='studio-list'>
+						<h2 className='studio-name'>{studio.studio_name}</h2>
+						<ul className='studio-info-list'>
+							<li className='studio-location'>{studio.studio_location}</li>
+							<li className='studio-contact'>{studio.studio_contact_info}</li>
 						</ul>
 						{
 							this.state.currentStudio && this.state.currentStudio.id === studio.id
@@ -55,6 +57,7 @@ class Studios extends Component {
 						}
 					</div>
 				))}
+				</div>
 			</div>
 		);
 	}

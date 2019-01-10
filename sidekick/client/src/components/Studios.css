@@ -1,0 +1,15 @@
+ .studio-list {
+	border: solid #4B656A;
+	justify-content: center;
+	align-items: center;
+	width: 350px;
+	height: 150px;
+	padding: 50px;
+	margin: 50px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.studio-name {
+	font-family: 'Staatliches', 'cursive';
+}

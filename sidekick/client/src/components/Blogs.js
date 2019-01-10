@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './Blogs.css';
+
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 
@@ -26,7 +28,7 @@ class Blogs extends Component {
 	}
 
 	async handleSubmit(id) {
-		await postComment(id, { comment: {user_name: this.state.username, comment_body: this.state.comment } });
+		await postComment(id, { comment: {user_name: this.state.username, comment_body: this.state.comment } })
 		const blogs = await getBlogs();
 		this.setState({
 			blogs
@@ -60,14 +62,14 @@ class Blogs extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='blog-list'>
 			{this.state.blogs.map(blog => (
-				<div key={blog.id}>
+				<div key={blog.id} className='blog-content'>
 					<ul>
-						<li>{blog.title}</li>
-						<li>{blog.blog_body}</li>
+						<li className='blog-title'>{blog.title}</li>
+						<li className='blog-body'>{blog.blog_body}</li>
 					</ul>
-					<hr />
+					<h3>Comments</h3>
 					<CommentList
 						blogs={blog}
 						handleDelete={this.handleDelete}

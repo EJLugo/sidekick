@@ -20,7 +20,7 @@ class Workouts extends Component {
 		return (
 			<div>
 				<p>Finding your perfect sidekick is easy! You can search by your favorite workout and your level.</p>
-				<p>Here are some of the classes and levels that can be found on sidekick:</p>
+				<p>Here are some of your amazing, ass-kicking options:</p>
 				<div>
 				{this.state.workouts.map(workout => (
 					<ul>

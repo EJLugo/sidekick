@@ -5,3 +5,19 @@
 ul {
 	list-style: none;
 }
+
+body {
+	background-image: URL('../images/crossfit-chicks.jpg');
+	background-size: cover;
+}
+
+button {
+	font-size: 16pt;
+	font-family: 'Staatliches';
+	color: #4B656A;
+}
+
+input {
+	width: 80px;
+	height: 40px;
+}

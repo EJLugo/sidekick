@@ -1,17 +1,18 @@
 # Sidekick
 
 * Sidekick is an app designed for women looking to find their perfect workout buddy, or, their sidekick.
-* Using a shared interest of fitness type, users can find women working out at the same studio.
+* Using a shared interest of fitness type or studio, users can find new workout buddies by connecting with other women.
+
 
 ## Technologies
 * Rails
 * React
+* React Router
 
 ## Trello Board
 [Trello](https://trello.com/b/uaVqcOmJ/sidekick)
 
 ## MVP
-* Users can search for workouts by type
 * Users can search studio class offerings
 * Users can read fitness related articles
 * Users can comment on articles
@@ -24,12 +25,10 @@
 * Registered users can requests to add workouts
 * Shop Sidekick merchandise
 
-
-## Documentation
-* To be created
-
 ## Wireframes
 ![Wireframes for MVP](https://github.com/EJLugo/sidekick/blob/master/README%20Images/Sidekick%20Wireframes.JPG)
 
 ## ERD
 ![ERD for MVP](https://github.com/EJLugo/sidekick/blob/master/README%20Images/Sidekick%20ERD.png)
+
+## 

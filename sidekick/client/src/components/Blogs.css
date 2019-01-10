@@ -1,0 +1,17 @@
+.blog-list {
+	display: flex;
+}
+
+.blog-content {
+	border: solid #4B656A;
+	background-color: #D5DCDF;
+	opacity: .8;
+	overflow: scroll;
+	flex: 2;
+}
+
+.blog-title {
+	font-size: 20pt;
+	font-weight: bold;
+	color: #6A5759;
+}
