@@ -13,3 +13,8 @@
 .studio-name {
 	font-family: 'Staatliches', 'cursive';
 }
+
+.studio-listings {
+	margin: 0 auto;
+	text-align: center;
+}

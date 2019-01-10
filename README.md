@@ -31,4 +31,9 @@
 ## ERD
 ![ERD for MVP](https://github.com/EJLugo/sidekick/blob/master/README%20Images/Sidekick%20ERD.png)
 
-## 
+## Project Link
+[Sidekick]()
+
+## Acknowledgments
+* Many thanks to Jess at Hey Girl for being there through long nights of issues and collaboration.
+* David Whitlatch for being a coding angel and helping me sort through issues.

@@ -22,7 +22,7 @@ class Studios extends Component {
 	render() {
 		return (
 			<div className='studio-list-container'>
-				<div className='studio-list-nouse'>
+				<div className='studio-listings'>
 				{this.state.studios.map(studio => (
 					<div key={studio.id} className='studio-list'>
 						<h2 className='studio-name'>{studio.studio_name}</h2>
