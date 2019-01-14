@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Workouts.css';
 import { getWorkouts } from '../services/workouts';
 
 class Workouts extends Component {
@@ -19,7 +20,7 @@ class Workouts extends Component {
 	render() {
 		return (
 			<div>
-				<p>Finding your perfect sidekick is easy! You can search by your favorite workout and your level.</p>
+				<h3 className='workout-header'>Finding your perfect sidekick is easy! You can search by your favorite workout and your level.</h3>
 				<p>Here are some of your amazing, ass-kicking options:</p>
 				<div>
 				{this.state.workouts.map(workout => (
