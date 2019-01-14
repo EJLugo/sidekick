@@ -37,7 +37,8 @@
 ## Code Sample
 * Below is a sampling of AJAX calls to read, post, update, and delete comments on blog entries.
 
-```async function getBlogs(){
+```
+async function getBlogs(){
 	const resp = await axios('/blogs');
 	return resp.data;
 }
