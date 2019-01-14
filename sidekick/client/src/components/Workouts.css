@@ -1,3 +1,14 @@
-.workout-header {
+.workout-header-container {
+	background-color: #BD998C;
+	
+}
 
+.workout-header {
+	font-family: 'Staatliches';
+	font-size: 35pt;
+}
+
+.workout-listings {
+	font-family: 'Staatliches';
+	font-size: 20pt;
 }

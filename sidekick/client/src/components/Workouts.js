@@ -20,8 +20,10 @@ class Workouts extends Component {
 	render() {
 		return (
 			<div>
-				<h3 className='workout-header'>Finding your perfect sidekick is easy! You can search by your favorite workout and your level.</h3>
-				<p>Here are some of your amazing, ass-kicking options:</p>
+				<div className='workout-header-container'>
+				<h3 className='workout-header'>Finding your perfect sidekick is easy!</h3>
+				</div>
+				<p className='workout-listings'>Here are some of your amazing, ass-kicking options:</p>
 				<div>
 				{this.state.workouts.map(workout => (
 					<ul>
